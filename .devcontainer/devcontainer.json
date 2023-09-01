@@ -1,0 +1,23 @@
+{
+  "name": "Next.js Dev Container",
+  "dockerComposeFile": "../docker-compose.yml",
+  "service": "nextjs-app",
+  "workspaceFolder": "/workspace",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint",
+        "ms-azuretools.vscode-docker"
+      ],
+      "settings": {
+        "terminal.integrated.shell.linux": "/bin/bash"
+      }
+    }
+  },
+
+  "forwardPorts": [3001],
+
+  "postCreateCommand": "npm install"
+}
